@@ -64,7 +64,13 @@ config.*
 *.Po
 .dirstamp
 Makefile
+configure~
+stamp-h2
 
 # Coverage
 *.gcno
 *.gcda
+
+# Unittest
+*.log
+umattertest.*
