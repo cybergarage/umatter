@@ -9,7 +9,7 @@
 ##################################################################
 
 AC_CONFIG_AUX_DIR(config)
-AC_CONFIG_HEADERS(config.h)
+AC_CONFIG_HEADERS([config.h])
 
 AC_INIT([umatter],[1.0.0])
 AC_CONFIG_SRCDIR([include/umatter/typedef.h])
