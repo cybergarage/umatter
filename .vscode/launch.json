@@ -10,7 +10,8 @@
             "name": "Debug",
             "program": "${workspaceFolder}/test/unix/umattertest",
             "args": [],
-            "cwd": "${workspaceFolder}"
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "make check"
         }
     ]
 }
