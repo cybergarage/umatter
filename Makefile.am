@@ -16,6 +16,8 @@
 # 
 ######################################################################
 
+ACLOCAL_AMFLAGS = -I m4
+
 SUBDIRS = include lib
 
 # if UMATTER_ENABLE_EXAMPLES
