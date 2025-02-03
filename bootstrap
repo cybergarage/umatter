@@ -1,0 +1,17 @@
+#!/bin/bash
+
+pushd include && ./Makefile.am.build > Makefile.am && popd
+pushd lib/unix && ./Makefile.am.build > Makefile.am && popd
+pushd test/unix && ./Makefile.am.build > Makefile.am && popd
+
+if [ ! -d config ]; then
+    mkdir config
+fi
+if [ ! -d autom4te.cache ]; then
+	rm -rf autom4te.cache/*
+fi
+
+aclocal
+autoheader
+automake --foreign --add-missing --copy
+autoconf 
