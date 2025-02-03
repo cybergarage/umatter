@@ -55,3 +55,16 @@ dkms.conf
 .DS_Store
 project.xcworkspace/
 xcuserdata/
+
+# Automake
+aclocal.m4
+autom4te.cache/
+config.log
+.deps/
+*.Po
+.dirstamp
+Makefile
+
+# Coverage
+*.gcno
+*.gcda
