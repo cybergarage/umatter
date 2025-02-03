@@ -57,7 +57,6 @@ project.xcworkspace/
 xcuserdata/
 
 # Automake
-aclocal.m4
 autom4te.cache/
 config.*
 .deps/
