@@ -118,7 +118,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__dirstamp = $(am__leading_dot)dirstamp
-am_umattertest_OBJECTS = ../BytesTest.$(OBJEXT) \
+am_umattertest_OBJECTS = ../BytesTest.$(OBJEXT) ../TestMain.$(OBJEXT) \
 	../InterfaceTest.$(OBJEXT)
 umattertest_OBJECTS = $(am_umattertest_OBJECTS)
 umattertest_DEPENDENCIES = ../../lib/unix/libumatter.a
@@ -138,7 +138,7 @@ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/config/depcomp
 am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ../$(DEPDIR)/BytesTest.Po \
-	../$(DEPDIR)/InterfaceTest.Po
+	../$(DEPDIR)/InterfaceTest.Po ../$(DEPDIR)/TestMain.Po
 am__mv = mv -f
 CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
@@ -488,6 +488,7 @@ top_srcdir = @top_srcdir@
 AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/src -I../
 umattertest_SOURCES = \
 	..//BytesTest.cpp \
+	..//TestMain.cpp \
 	..//InterfaceTest.cpp
 
 
@@ -539,6 +540,7 @@ clean-checkPROGRAMS:
 	@: >>../$(DEPDIR)/$(am__dirstamp)
 ../BytesTest.$(OBJEXT): ../$(am__dirstamp) \
 	../$(DEPDIR)/$(am__dirstamp)
+../TestMain.$(OBJEXT): ../$(am__dirstamp) ../$(DEPDIR)/$(am__dirstamp)
 ../InterfaceTest.$(OBJEXT): ../$(am__dirstamp) \
 	../$(DEPDIR)/$(am__dirstamp)
 
@@ -555,6 +557,7 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@../$(DEPDIR)/BytesTest.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@../$(DEPDIR)/InterfaceTest.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@../$(DEPDIR)/TestMain.Po@am__quote@ # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -898,6 +901,7 @@ clean-am: clean-checkPROGRAMS clean-generic mostlyclean-am
 distclean: distclean-am
 	-rm -f ../$(DEPDIR)/BytesTest.Po
 	-rm -f ../$(DEPDIR)/InterfaceTest.Po
+	-rm -f ../$(DEPDIR)/TestMain.Po
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -945,6 +949,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-am
 	-rm -f ../$(DEPDIR)/BytesTest.Po
 	-rm -f ../$(DEPDIR)/InterfaceTest.Po
+	-rm -f ../$(DEPDIR)/TestMain.Po
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

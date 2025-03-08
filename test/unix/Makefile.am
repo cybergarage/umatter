@@ -25,6 +25,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/src -I../
 
 umattertest_SOURCES = \
 	..//BytesTest.cpp \
+	..//TestMain.cpp \
 	..//InterfaceTest.cpp
 
 #if HAVE_LIBTOOL
