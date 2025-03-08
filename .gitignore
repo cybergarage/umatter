@@ -71,5 +71,5 @@ stamp-h2
 
 # Unittest
 *.log
-test/unix/umattertest
-test/unix/umattertest.*
+umattertest
+umattertest.*
