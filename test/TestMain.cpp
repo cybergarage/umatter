@@ -16,7 +16,7 @@
  *
  ******************************************************************/
 
-#define BOOST_TEST_MODULE MUPNP
+#define BOOST_TEST_MODULE UMATTER
 #define BOOST_TEST_DYN_LINK
 #define BOOST_TEST_MAIN
 
