@@ -58,6 +58,7 @@ xcuserdata/
 
 # Automake
 config.*
+autom4te.cache/*
 .deps/
 *.Po
 .dirstamp
